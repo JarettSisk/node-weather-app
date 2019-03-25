@@ -1,4 +1,3 @@
-console.log("its working");
 
 fetch("http://localhost:3000/weather?address=missouri").then((res) => {
   res.json().then((data) => {
