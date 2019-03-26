@@ -14,27 +14,28 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "../templates/views"));
 hbs.registerPartials(path.join(__dirname, "../templates/partials"));
+hbs.localsAsTemplateData(app);
+
+//hbs locals
+app.locals.name = "Nexus Designs"
 
 
 app.get("", (req, res) => {
   res.render("index.hbs", {
-    title: "Weather",
-    name: "Jarett Sisk"
+    title: "Weather"
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about.hbs", {
-    title: "About me",
-    name: "Jarett Sisk"
+    title: "About me"
   });
 })
 
 app.get("/help", (req, res) => {
   res.render("help.hbs", {
     title: "Help",
-    message: "Need help with your website? <br> Email me at: nexusdesigns.co@gmail.com",
-    name: "Jarett Sisk"
+    message: "Need help with your website? <br> Email me at: nexusdesigns.co@gmail.com"
   })
 })
 
@@ -82,7 +83,6 @@ app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "404",
     errorMessage: "Help article not found",
-    name: "Jarett Sisk"
   });
 })
 
@@ -90,7 +90,6 @@ app.get("*", (req, res) => {
   res.render("404", {
     title: "404",
     errorMessage: "Page not found",
-    name: "Jarett Sisk"
   });
 })
 
