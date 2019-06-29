@@ -35,7 +35,7 @@ app.get("/about", (req, res) => {
 app.get("/help", (req, res) => {
   res.render("help.hbs", {
     title: "Help",
-    message: "Need help with your website? <br> Email me at: nexusdesigns.co@gmail.com"
+    message: "Need help with your website? <br> Email me at: jarett.sisk@gmail.com"
   })
 })
 
