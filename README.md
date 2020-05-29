@@ -1,1 +1,1 @@
-A A small weather application that uses the darksky & mapbox api's to dynamically display current weather to the user. Click the link below and give it a try! #node #JavaScript   https://jarett-sisk-node-weather-app.herokuapp.com/
+A small weather application that uses the darksky & mapbox api's to dynamically display current weather to the user. Click the link below and give it a try! #node #JavaScript   https://jarett-sisk-node-weather-app.herokuapp.com/
